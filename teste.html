@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pergunta</title>
+  <style>
+    /* Estilos apenas para melhorar a aparência */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 20px;
+      border: none;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    #sim {
+      background-color: #4CAF50;
+      color: white;
+    }
+    #nao {
+      background-color: #f44336;
+      color: white;
+    }
+    #nao:hover {
+      background-color: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Da o cuzinho hoje ??</h2>
+
+<button id="sim" onclick="abrirYoutube()">Sim</button>
+<button id="nao" onclick="moverBotao()">Não</button>
+
+<script>
+  function abrirYoutube() {
+    window.open("https://youtu.be/kjSiIzrMpLc", "_blank");
+  }
+
+  function moverBotao() {
+    var botaoNao = document.getElementById("nao");
+    botaoNao.style.position = "absolute";
+    botaoNao.style.left = Math.random() * (window.innerWidth - botaoNao.offsetWidth) + "px";
+    botaoNao.style.top = Math.random() * (window.innerHeight - botaoNao.offsetHeight) + "px";
+  }
+</script>
+
+</body>
+</html>
